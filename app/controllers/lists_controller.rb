@@ -5,6 +5,7 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
+    @bookmark = Bookmark.new
   end
 
   def new
@@ -22,8 +23,8 @@ class ListsController < ApplicationController
 
   private
 
-  def restaurant_params
-    params.require(:list).permit( :name)
+  def list_params
+    params.require(:list).permit(:name)
   end
 
 end

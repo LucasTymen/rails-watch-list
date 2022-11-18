@@ -1,9 +1,9 @@
 <div>
-  <h1>Liste</h1>
-  <%= @lists.each do |list| %>
-    <ul>
-      <li><%= link_to list.name, list_path(list) %></li>
-    </ul>
-
-  <% end %>
+  <h2>List of kinds of films</h2>
+  <ul>
+    <% @lists.each do |list| %>
+      <li><%= link_to list.name, list_path(list.id) %>
+      </li>
+    <% end %>
+  </ul>
 </div>
